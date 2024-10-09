@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>My Vegetarian Recipes Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Apply the Roboto font */
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            background-color: #056643;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: absolute;
+            height: 60px; /* Set the height of the footer */
+            width: 100%;
+            bottom: 0;
+        }
+        main {
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+        }
+        /* Link formatting */
+        a {
+            font-family: corporate-s,Helvetica Neue,Helvetica,Arial,sans-serif;
+            letter-spacing: normal;
+            font-size: 1.25em; /* Increases the text size */
+            text-decoration: none; /* Removes the underline from links */
+            color: inherit; /* Allows the link to inherit the text color from its parent */
+        }
+        /* Recipe and picture formatting */
+        .recipe {
+            font-family: 'Roboto', sans-serif; /* Ensuring the link text uses Roboto */
+            text-align: left; /* Aligns text to left */
+            width: 500px; /* Set a fixed width for alignment */
+            text-decoration:none;
+            margin-bottom: 20px; /* Space between recipes */
+        }
+        .recipe img {
+            width:100px; /* Set a specific width for images */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 15px; /* Space between text and image */
+        }
+        .picture-and-recipe-name {
+            display: flex; /* Make the content a flex container */
+            align-items: center; /* Vertically align items in the center */
+        }
+        .picture-and-recipe-name p {
+            //margin-right: 15px; /* Add space between the paragraph and the image */
+        }
+        /* Gray line after recipe */
+        .recipe::after {
+            content: ""; /* Necessary for pseudo-elements */
+            display: block;
+            max-width: 500px; /* Adjust based on your layout */
+            height: 2px; /* Line thickness */
+            background-color: lightgray; /* Line color */
+            margin: 20px auto; /* Centers the line and adds spacing */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Vegetarian Recipes Page</h1>
+    </header>
+    <main>
+        <div class="recipe">
+            <div class="picture-and-recipe-name">
+                <img src="images/veggie-burritos.webp" alt="Veggie Burritos" />
+                <a href="veggie-burritos.html"><p>Veggie burritos</p></a>
+            </div>
+            <p>Try our vegetarian burritos filled with mushrooms, beans and corn, complemented
+            by creamy avocado and subtle spice. Enjoy with a tomato salsa on the side</p>
+        </div>
+        <div class="recipe">
+            <div class="picture-and-recipe-name">
+                <img src="images/sticky-tempeh-stir-fry.webp" alt="Sticky Tempeh Stir-fry" />
+                <a href="sticky-tempeh-stir-fry.html"><p>Sticky Tempeh stir-fry</p></a>
+            </div>
+            <p>Rustle up this vegan stir-fry which uses tempeh, a great source of protein
+            made from soy beans. Quick and easy, it takes just 30 minutes to make</p>
+        </div>
+        <div class="recipe">
+            <div class="picture-and-recipe-name">
+                <img src="images/simple-mushroom-curry.webp" alt="Simple Mushroom Curry" />
+                <a href="simple-mushroom-curry.html"><p>Simple mushroom curry</p></a>
+            </div>
+            <p>Serve these garlicky mushrooms in a rich tomato masala spiced with ground ginger,
+            fennel seeds and cumin for an autumnal supper. Enjoy with rice or naan</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p> 
+    </footer>
+</body>
+</html>
