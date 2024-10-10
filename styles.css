@@ -1,0 +1,92 @@
+body {
+    display: flex; /* Enables flexbox layout for the body */
+    flex-direction: column; /* Stacks child elements vertically */
+    min-height: 100vh; /* Ensures the body takes up full height of the viewport */            
+    font-family: 'Roboto', sans-serif; /* Apply the Roboto font */
+    margin: 0; /* Removes default margin from body */
+    padding: 0; /* Removes default padding from body */
+    background-color: white; /* Sets the background color to white */
+}
+
+header {
+    background-color: #056643; /* Sets the header background color */
+    color: white; /* Sets the text color in the header */
+    padding: 10px 20px; /* Adds padding inside the header */
+    text-align: center; /* Centers the text inside the header */
+}
+
+footer {
+    background-color: #333; /* Sets the footer background color */
+    color: white; /* Sets the text color in the footer */
+    text-align: center; /* Centers the text inside the footer */
+    padding: 10px 20px; /* Adds padding inside the footer */
+    position: relative; /* Allows positioning relative to its parent */
+    height: 60px; /* Sets a fixed height for the footer */
+    width: 100%; /* Ensures footer spans the entire width */
+    bottom: 0; /* Positions the footer at the bottom */
+}
+
+main {
+    margin: 20px; /* Adds space around the main section */
+    padding: 20px; /* Adds padding inside the main section */
+    display: flex; /* Enables flexbox layout for the main section */
+    flex-direction: column; /* Stacks child elements in a column */
+    align-items: center; /* Centers items horizontally */
+    flex-grow: 1; /* Allows the main section to grow and fill available space */
+}
+
+/* Link formatting */
+a {
+    font-family: corporate-s, Helvetica Neue, Helvetica, Arial, sans-serif; /* Sets the font for links */
+    letter-spacing: normal; /* Resets letter spacing to normal */
+    font-size: 1.25em; /* Increases the text size */
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Allows the link to inherit the text color from its parent */
+}
+
+/* Recipe and picture formatting */
+.recipe {
+    font-family: 'Roboto', sans-serif; /* Ensuring the recipe text uses Roboto */
+    text-align: left; /* Aligns text to the left */
+    width: 100%; /* Use percentage instead of fixed width */
+    max-width: 500px; /* Allow it to scale up to a maximum width */
+    text-decoration: none; /* Removes text decoration */
+    margin-bottom: 20px; /* Space between recipes */
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    padding: 15px; /* Adds internal padding for recipe blocks */
+    border-radius: 8px; /* Creates rounded corners for the recipe block */
+    background-color: #f9f9f9; /* Sets a light background color */
+}
+
+.recipe img {
+    width: 100px; /* Sets a specific width for images */
+    height: auto; /* Maintains aspect ratio of images */
+    margin-right: 15px; /* Space between text and image */
+}
+
+.picture-and-recipe-name {
+    display: flex; /* Makes the content a flex container */
+    align-items: center; /* Vertically aligns items in the center */
+}
+
+/* Gray line after recipe */
+.recipe::after {
+    content: ""; /* Necessary for pseudo-elements to function */
+    display: block; /* Displays the element as a block */
+    max-width: 500px; /* Adjusts based on your layout */
+    height: 2px; /* Sets line thickness */
+    background-color: lightgray; /* Sets line color */
+    margin: 20px auto; /* Centers the line and adds spacing above and below */
+}
+
+/* Media Queries to handle smaller screens, adjusting margins and paddings */
+@media (max-width: 768px) {
+    main {
+        margin: 10px; /* Reduces margin for smaller screens */
+        padding: 10px; /* Reduces padding for smaller screens */
+    }
+    .recipe {
+        width: calc(100% - 40px); /* Adjusts width to account for margins/padding */
+    }
+}
